@@ -1,0 +1,29 @@
+{% extends '../base/base.html' %}
+
+{% block title %}
+Upload The Text File
+{% endblock title %}
+
+{% block cssFile %}
+/static/css/txt_Upload/txt_upload.css
+{% endblock cssFile %}
+
+{% block content %}
+<div class="title_container">
+  <h1>Upload The Text File</h1>
+</div>
+<div class="file_and_button_container">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" multiple name="text_file" required/>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+{% for txt in txt_files %}
+<hr>
+<p>{{txt}}</p>
+<hr>
+{% endfor %}
+
+{% endblock content %}

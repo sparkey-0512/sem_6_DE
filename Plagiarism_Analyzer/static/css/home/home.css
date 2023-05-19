@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+.container{
+  height: 100vh;
+}
+.card_container{
+  height: 40%;
+  width: 60%;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.cards,.card{
+  height: 100%;
+}
+.card:not(:first-child){
+  border-left: 1px solid black;
+}
+.card{
+  width: 100%;
+  cursor: pointer;
+}
+.container,.cards,.card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

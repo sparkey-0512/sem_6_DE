@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock title %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href={% block cssFile %}{% endblock cssFile %} rel="stylesheet">
+  </head>
+  <body>
+    <h1 style="margin:1% 5%"><a href="/">Home</a></h1>
+    {% block content %}
+    {% endblock content %}
+  </body>
+</html>
