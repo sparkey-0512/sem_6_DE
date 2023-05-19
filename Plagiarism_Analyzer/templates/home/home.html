@@ -1,0 +1,40 @@
+{% extends '../base/base.html' %}
+
+{% block title %}
+Home
+{% endblock title %}
+
+{% block cssFile %}
+/static/css/home/home.css
+{% endblock cssFile %}
+
+{% block content %}
+<div class="container">
+    <div class="card_container">
+      <div class="cards">
+        <div class="card card_1">
+          <a href="/img_upload/">
+            <h3>
+              Upload an Image
+            </h3>
+          </a>
+        </div>
+        <div class="card card_2">
+        <a href="/text_file_upload/">
+          <h3>
+            Upload the Text File
+          </h3>
+        </a>
+        </div>
+        
+        <div class="card card_2">
+          <a href="/write_past/">
+            <h3>
+              Write a Text
+            </h3>
+         </a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

@@ -1,0 +1,50 @@
+{% extends '../base/base.html' %}
+
+{% block title %}
+Image Upload
+{% endblock title %}
+
+{% block cssFile %}
+/static/css/Image_Upload/img_upload.css
+{% endblock cssFile %}
+
+{% block content %}
+<div class="title_container">
+  <h1>Upload an Image</h1>
+</div>
+<div class="file_and_button_container">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" multiple name="imgs" required/>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<p style="
+display:{{error}};
+align-itmes:center;
+justify-content:center;
+margin-top:1%;
+color:red;
+">
+Please Check your Image or You were not uploaded 2 Images
+</p>
+
+<h2 class="uploaded_img" style="display:{{show}}">Uploaded Image</h2>
+
+<div class="user_img_container">
+{% for img in images %}
+<img class="user_img" src="{{img.imgs.url}}" alt="">
+{% endfor %}
+</div>
+
+<h2 class="diff_img_title" style="display:{{show}}"> Difference Image </h2>
+<div class="diff_img_container">
+<img class="diff_img" src="{{diff_img}}" style="display:{{show}}" alt="Difference Image"/>
+</div>
+
+<div class="result_container">
+<h3 style="display:{{show}}">The Similarity between these two images : <bold>{{similarity}} %</bold> </h3>
+<h3><bold>{{plagiarism}}</bold></h3>
+</div>
+{% endblock content %}

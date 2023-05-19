@@ -1,0 +1,29 @@
+{% extends '../base/base.html' %}
+
+{% block title %}
+Write or Past the Text
+{% endblock title %}
+
+{% block cssFile %}
+/static/css/txt_write_past/txt_write_past.css
+{% endblock cssFile %}
+
+{% block content %}
+<div class="title_container">
+  <h1>Write Or Past the Text</h1>
+</div>
+<div class="file_and_button_container">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <textarea row="4" col="20" name='text1' class="text text1" required></textarea>
+    <textarea row="4" col="20" name='text2' class="text text2" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<hr>
+<p>{{text1}}</p>
+<hr>
+<p>{{text2}}</p>
+
+{% endblock content %}
