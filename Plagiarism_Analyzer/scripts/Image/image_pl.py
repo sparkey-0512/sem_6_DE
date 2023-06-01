@@ -70,8 +70,8 @@ def Image_Plagiarism(img1,img2):
 
     print("Structural Similarity Index(SSIM): ") 
     x1, x2 = ssim(image1,image2)
-    x1 = round(x1*100,2)
-    print(x1*100,"\n")
+    x1 = round(x1,2)
+    print(x1,"\n")
     print("The Similarity between these two images: ", (x1)*100, "%")
 
     

@@ -26,6 +26,7 @@ urlpatterns = [
     path('img_upload/',imgView.ImgUploadPage),
     path('text_file_upload/',txtView.TxtUploadPage),
     path('write_past/',txtView.TxtWritePast),
+    path('result/',txtView.Result),
     path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 

@@ -20,10 +20,22 @@ Upload The Text File
   </form>
 </div>
 
+<p style="
+display:{{error}};
+align-itmes:center;
+justify-content:center;
+margin-top:1%;
+color:red;
+">
+Please Check your text file or You were not uploaded 2 text files
+</p>
+
 {% for txt in txt_files %}
 <hr>
 <p>{{txt}}</p>
 <hr>
 {% endfor %}
+
+<a href='/result' style="display:{{display}}"> click the Result </a>
 
 {% endblock content %}
