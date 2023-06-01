@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 img{
-    width: 200px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
 }
 .title_container h1{
     margin: 1% 0;
@@ -20,8 +20,8 @@ img{
     gap: 10%;
 }
 .diff_img{
-    width: 400px;
-    height: 600px;
+    width: 600px;
+    height: 400px;
 }
 .result_container{
     display: flex;
