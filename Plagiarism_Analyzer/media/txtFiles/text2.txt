@@ -1,1 +1,9 @@
-random 2 text file
+<p style="
+display:{{error}};
+align-itmes:center;
+justify-content:center;
+margin-top:1%;
+color:red;
+">
+Please Check your Image or You were not uploaded 2 Images
+</p>
